@@ -22,6 +22,7 @@ export const Button = ({
   className,
   ...props
 }: ButtonProps) => {
+  
   return (
     <div className="flex items-center gap-2">
       <button
