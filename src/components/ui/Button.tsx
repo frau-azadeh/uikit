@@ -4,6 +4,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   size?: "sm" | "md";
   align?: "center"|"right";
+  width?: "full" | "small" | "medium";
   children: ReactNode;
 }
 
@@ -11,6 +12,7 @@ export const Button = ({
   variant = "primary",
   size = "sm",
   align = "center",
+  width = "full",
   children,
   ...props
 }: ButtonProps) => {
@@ -27,6 +29,12 @@ export const Button = ({
         ${align === "center" ? "justify-center" :
           align === "right" ? "justify-end" :
           "justify-start"
+        }
+        ${width === "full" ? "w-full" :
+          width === "small" ? "w-24" :
+          width === "medium" ? "w-36" : 
+          "w-40"
+
         }
         hover:opacity-80 active:scale-95`}
       {...props}
