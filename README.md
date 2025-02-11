@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Custom UI Kit for React (TailwindCSS)
 
-## Getting Started
+This is a reusable and scalable UI Kit built with **React** and **TailwindCSS** to maintain design consistency across projects.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔄 **Reusable Components** – Write once, use everywhere.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🎨 **Customizable Props** – Modify `size`, `variant`, `align`, and `width` easily.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📱 **Responsive Design** – Works seamlessly across devices.
 
-## Learn More
+- ⚡ **TailwindCSS Powered** – Lightweight and easy to customize.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 **Installation**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To use this UI Kit in your project, install TailwindCSS if you haven't already:
 
-## Deploy on Vercel
+        npm install tailwindcss
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Then, import the components into your project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Components
+
+    1️⃣ Button Component
+
+    A fully customizable button with variants, sizes, alignment, and width options.
+
+    ✅ Usage
+
+        import { Button } from "@/components/ui/Button";
+
+            <Button variant="primary" size="sm" width="small" align="center">
+                Click Me
+            </Button>
+
+## 🎨 Props
+
+| Prop       | Type                                 | Default     | Description                       |
+|------------|--------------------------------------|-------------|-----------------------------------|
+| `variant`  | `"primary"` , `"secondary"`          | `"primary"` | Defines button color scheme       |
+| `size`     | `"sm"` , `"md"`                      | `"sm"`      | Defines button size               |
+| `align`    | `"left"` , `"center"` , `"right"`    | `"center"`  | Sets text alignment inside button |
+| `width`    | `"full"` , `"auto"` , `"small"`      | `"auto"`    | Controls button width             |
+
+
+
+## 🎨 Customization
+
+You can customize the button styles in Button.tsx:
+
+        const variantClass = {
+            primary: "bg-blue-500 text-white",
+            secondary: "bg-green-700 text-white",
+        };
+
+ Simply update the colors, fonts, and effects as per your design system.
+
+
+
+## 🛠 Upcoming Components
+
+    After completing the Button, we will develop the following UI components:
+
+## 🎨 Essential Components:
+    ✅ Input Field – Customizable text input with validation support.
+
+    ✅ Card – A flexible UI container with header, body, and footer sections.
+
+    ✅ Badge – Small notification tags for statuses (success, warning, error).
+
+    ✅ Modal – Popup component for dialogs and alerts.
+
+    ✅ Alert – Notification messages for user feedback.
+
+    ✅ Toggle / Switch – A styled switch component for settings.
+
+    ✅ Dropdown – Custom dropdown with icons and search functionality.
+
+    ✅ Tooltip – Small popups for additional information.
+
+## 🚀 Advanced Components:
+    🔄 Table – Dynamic tables with sorting and filtering.
+
+    📩 Pagination – Navigation for handling long lists.
+
+    📜 Accordion – Expandable panels for FAQs.
+
+    🛒 Stepper – Multi-step UI (e.g., checkout process).
+
+    🔀 Tabs – A component for tabbed navigation.
