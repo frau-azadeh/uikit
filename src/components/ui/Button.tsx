@@ -3,12 +3,14 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   size?: "sm" | "md";
+  align?: "center"|"right";
   children: ReactNode;
 }
 
 export const Button = ({
   variant = "primary",
   size = "sm",
+  align = "center",
   children,
   ...props
 }: ButtonProps) => {
@@ -22,6 +24,10 @@ export const Button = ({
         ${size === "sm" ? "text-sm" :
           size === "md" ? "text-md":
            "text-lg"}
+        ${align === "center" ? "justify-center" :
+          align === "right" ? "justify-end" :
+          "justify-start"
+        }
         hover:opacity-80 active:scale-95`}
       {...props}
     >
