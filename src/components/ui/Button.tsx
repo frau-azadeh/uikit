@@ -15,12 +15,18 @@ export const Button = ({
   return (
     <button
       className={`rounded flex items-center px-4 py-2 font-medium transition 
-        ${variant === "primary" ? "bg-blue-500 text-white" : "bg-gray-300 text-black"}
-        ${size === "sm" ? "text-sm" : "text-md"}
+        ${variant === "primary" ? "bg-blue-500 text-white" : 
+          variant === "secondary" ? "bg-green-700 text-white" : 
+          "bg-gray-300 text-black"
+        }
+        ${size === "sm" ? "text-sm" :
+          size === "md" ? "text-md":
+           "text-lg"}
         hover:opacity-80 active:scale-95`}
       {...props}
     >
       {children}
     </button>
+    
   );
 };
