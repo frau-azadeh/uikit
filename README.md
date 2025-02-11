@@ -2,7 +2,6 @@
 
 This is a reusable and scalable UI Kit built with **React** and **TailwindCSS** to maintain design consistency across projects.
 
----
 
 ## 📌 Features
 
@@ -14,7 +13,6 @@ This is a reusable and scalable UI Kit built with **React** and **TailwindCSS** 
 
 - ⚡ **TailwindCSS Powered** – Lightweight and easy to customize.
 
----
 
 ## 📦 **Installation**
 
