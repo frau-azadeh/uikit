@@ -11,24 +11,13 @@ export default function Home() {
         <Button variant="secondary" size="md" align="center" width="medium">تماس با ما</Button>
       </div>
       <div className="flex flex-col gap-4 p-10">
-      {/* فیلد ساده */}
-      <Input label="نام کاربری" placeholder="نام خود را وارد کنید" />
-
-      {/* فیلد با آیکون */}
-      <Input label="جستجو" placeholder="کلمه‌ای وارد کنید" icon="🔍" />
-
-      {/* فیلد رمز عبور */}
-      <Input label="رمز عبور" type="password" placeholder="******" />
-
-      {/* فیلد غیرفعال */}
-      <Input label="ایمیل" type="email" placeholder="example@email.com" disabled />
-
-      {/* فیلد با پیام خطا */}
-      <Input label="نام کاربری" placeholder="نام خود را وارد کنید" error="نام کاربری الزامی است" />
-
-      {/* فیلد بزرگ‌تر با عرض کامل */}
-      <Input label="پیام" placeholder="یک پیام بنویسید..." inputSize="lg" fullWidth />
-    </div>
+        <Input label="نام کاربردی" placeholder="نام خود را وارد کنید"/>
+        <Input label="جستجو" placeholder="جستحو ... " icon="🔍"/>
+        <Input label="رمز عبور" type="password" placeholder="****"/>
+        <Input label="ایمیل" type="email" placeholder="example@gmail.com" disabled/>
+        <Input label="نام کاربری" placeholder="نام خود را وارد کنید" error="نام کاربری الزامی است"/>
+        <Input label="پیام" placeholder="یک پیام بنویسید" inputSize="lg" fullWidth />
+      </div>
     </div>
   );
 }
