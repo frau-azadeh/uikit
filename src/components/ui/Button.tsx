@@ -1,46 +1,44 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { cn } from '@/utils/cn'
+import React, { ButtonHTMLAttributes } from 'react'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
-  size?: "sm" | "md";
-  align?: "center"|"right";
-  width?: "full" | "small" | "medium";
-  children: ReactNode;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+  variant: "primary" | "secondary" | "outline" | "destractive",
+  size: "sm" | "md" | "lg" ,
+  isLoading?: boolean,
 }
 
-export const Button = ({
+const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "sm",
-  align = "center",
-  width = "full",
+  isLoading = false,
+  className,
   children,
-  ...props
-}: ButtonProps) => {
+  disabled,
+  ...rest
+}) => {
   return (
     <button
-      className={`rounded flex items-center px-4 py-2 font-medium transition 
-        ${variant === "primary" ? "bg-blue-500 text-white" : 
-          variant === "secondary" ? "bg-green-700 text-white" : 
-          "bg-gray-300 text-black"
-        }
-        ${size === "sm" ? "text-sm" :
-          size === "md" ? "text-md":
-           "text-lg"}
-        ${align === "center" ? "justify-center" :
-          align === "right" ? "justify-end" :
-          "justify-start"
-        }
-        ${width === "full" ? "w-full" :
-          width === "small" ? "w-24" :
-          width === "medium" ? "w-36" : 
-          "w-40"
-
-        }
-        hover:opacity-80 active:scale-95`}
-      {...props}
+      {...rest}
+      disabled = {isLoading || disabled}
+      className={cn(
+        'inline-flex items-center font-bold rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2',
+        //Variant style
+        variant === 'primary' && 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+        variant === 'secondary' && 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400',
+        variant === 'outline' && 'border border-gray-400 text-gray-800 hover:bg-gray-100 focus:ring-red-500',
+        variant === 'destractive' && 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+        //Size Style
+        size === 'sm' && 'px-3 py-1 text-sm',
+        size === 'md' && 'px-4 py-2 text-base',
+        size === 'lg' && 'px-5 py-3 text-lg',
+        //Disable or Loading
+        (isLoading || disabled) && 'opacity-50 cursor-not-allowed',
+        className
+      )}
     >
       {children}
     </button>
-    
-  );
-};
+  )
+}
+
+export default Button
