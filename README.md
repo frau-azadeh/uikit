@@ -2,7 +2,6 @@
 
 This is a reusable and scalable UI Kit built with **React** and **TailwindCSS** to maintain design consistency across projects.
 
-
 ## 📌 Features
 
 - 🔄 **Reusable Components** – Write once, use everywhere.
@@ -12,7 +11,6 @@ This is a reusable and scalable UI Kit built with **React** and **TailwindCSS** 
 - 📱 **Responsive Design** – Works seamlessly across devices.
 
 - ⚡ **TailwindCSS Powered** – Lightweight and easy to customize.
-
 
 ## 📦 **Installation**
 
@@ -38,14 +36,12 @@ Then, import the components into your project.
 
 ## 🎨 Props
 
-| Prop       | Type                                 | Default     | Description                       |
-|------------|--------------------------------------|-------------|-----------------------------------|
-| `variant`  | `"primary"` , `"secondary"`          | `"primary"` | Defines button color scheme       |
-| `size`     | `"sm"` , `"md"`                      | `"sm"`      | Defines button size               |
-| `align`    | `"left"` , `"center"` , `"right"`    | `"center"`  | Sets text alignment inside button |
-| `width`    | `"full"` , `"auto"` , `"small"`      | `"auto"`    | Controls button width             |
-
-
+| Prop      | Type                              | Default     | Description                       |
+| --------- | --------------------------------- | ----------- | --------------------------------- |
+| `variant` | `"primary"` , `"secondary"`       | `"primary"` | Defines button color scheme       |
+| `size`    | `"sm"` , `"md"`                   | `"sm"`      | Defines button size               |
+| `align`   | `"left"` , `"center"` , `"right"` | `"center"`  | Sets text alignment inside button |
+| `width`   | `"full"` , `"auto"` , `"small"`   | `"auto"`    | Controls button width             |
 
 ## 🎨 Customization
 
@@ -56,15 +52,14 @@ You can customize the button styles in Button.tsx:
             secondary: "bg-green-700 text-white",
         };
 
- Simply update the colors, fonts, and effects as per your design system.
-
-
+Simply update the colors, fonts, and effects as per your design system.
 
 ## 🛠 Upcoming Components
 
     After completing the Button, we will develop the following UI components:
 
 ## 🎨 Essential Components:
+
     ✅ Input Field – Customizable text input with validation support.
 
     ✅ Card – A flexible UI container with header, body, and footer sections.
@@ -82,6 +77,7 @@ You can customize the button styles in Button.tsx:
     ✅ Tooltip – Small popups for additional information.
 
 ## 🚀 Advanced Components:
+
     🔄 Table – Dynamic tables with sorting and filtering.
 
     📩 Pagination – Navigation for handling long lists.
