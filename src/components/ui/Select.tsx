@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn";
 import React, { SelectHTMLAttributes } from "react";
+
+import { cn } from "@/utils/cn";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;

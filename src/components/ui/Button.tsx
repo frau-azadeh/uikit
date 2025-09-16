@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn";
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
+
+import { cn } from "@/utils/cn";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: "primary" | "secondary" | "outline" | "destractive";
